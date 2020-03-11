@@ -1,6 +1,5 @@
 import random
 import pdb
-import sys
 
 
 class BaseNumberGenerator:
