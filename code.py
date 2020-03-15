@@ -39,6 +39,10 @@ def main(options: dict = {}) -> str:
     f.write("config file.")
     f.close()
 
+    
+def moon_chooser(moons=['europa', 'callisto', 'phobos']):
+    return random.choice(moons)
+
 
 if __name__ == '__main__':
     args = ['--disable', 'all']
