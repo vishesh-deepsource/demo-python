@@ -1,7 +1,31 @@
-# Demo repository - Python
+<p align="center">
+  <img src="https://deepsource.io/images/logo-wordmark-dark.svg" />
+</p>
 
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light-mini.svg)](https://deepsource.io/gh/deepsourcelabs/demo-python/?ref=repository-badge)
+<p align="center">
+  <a href="https://deepsource.io/docs/">Documentation</a> |
+  <a href="https://deepsource.io/signup/">Get Started</a> |
+  <a href="https://discuss.deepsource.io/">Discuss</a>
+</p>
+
+<p align="center">
+  DeepSource helps you ship good quality code.
+</p>
+
+</p>
+
+---
+
+# Demo repository - Python
 
 This repository demonstrates sample issues in Python code raised by DeepSource.
 
-Results: https://deepsource.io/gh/deepsourcelabs/demo-python/issues/
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/deepsourcelabs/cli/?ref=repository-badge)
+
+### Report
+
+[https://deepsource.io/gh/deepsourcelabs/demo-python/issues/](https://deepsource.io/gh/deepsourcelabs/demo-python/issues/)
+
+### Documentation
+
+[https://deepsource.io/docs/analyzer/python.html](https://deepsource.io/docs/analyzer/python.html)
