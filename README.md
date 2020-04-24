@@ -20,7 +20,7 @@
 
 This repository demonstrates sample issues in Python code raised by DeepSource.
 
-[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/deepsourcelabs/cli/?ref=repository-badge)
+[![DeepSource](https://static.deepsource.io/deepsource-badge-light.svg)](https://deepsource.io/gh/deepsourcelabs/demo-python/?ref=repository-badge)
 
 ### Report
 
