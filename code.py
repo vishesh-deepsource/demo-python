@@ -1,7 +1,12 @@
 import random
 import pdb
 import sys
+import os
+import subprocess
 
+from django.db.models.expressions import RawSQL
+
+AWS_SECRET_KEY = 'd6s$f9g!j8mg7hw?n&2'
 
 class BaseNumberGenerator:
     def __init__(self):
@@ -39,10 +44,19 @@ def main(options: dict = {}) -> str:
     f.write("config file.")
     f.close()
 
-    
+
 def moon_chooser(moons=['europa', 'callisto', 'phobos']):
     return random.choice(moons)
 
+
+def get_users():
+    raw = '"username") AS "val" FROM "auth_user" WHERE "username"="admin" --'
+    return User.objects.annotate(val=RawSQL(raw, []))
+
+def tar_something():
+    os.tempnam('dir1')
+    subprocess.Popen('/bin/chown *', shell=True)
+    o.system("/bin/tar xvzf *")
 
 if __name__ == '__main__':
     args = ['--disable', 'all']
