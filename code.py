@@ -3,6 +3,7 @@ import pdb
 import sys
 import os
 import subprocess
+import foobar
 
 from django.db.models.expressions import RawSQL
 
