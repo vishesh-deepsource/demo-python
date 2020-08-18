@@ -1,5 +1,10 @@
 import random
 import pdb
+
+
+
+
+
 import sys
 import os
 import subprocess
@@ -46,6 +51,17 @@ def main(options: dict = {}) -> str:
     f.close()
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 def moon_chooser(moons=["europa", "callisto", "phobos"]):
     return random.choice(moons)
 
@@ -61,6 +77,22 @@ def tar_something():
     o.system("/bin/tar xvzf *")
 
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 if __name__ == "__main__":
     args = ["--disable", "all"]
     for i in range(len(args)):
