@@ -61,6 +61,25 @@ def tar_something():
     o.system("/bin/tar xvzf *")
 
 
+def bad_isinstance(object, other_obj, foo, bar, baz):
+    if (
+        isinstance(object, int)
+        or isinstance(object, float)
+        or isinstance(object, str)
+        and isinstance(other_obj, float)
+        and isinstance(foo, str)
+        or (
+            isinstance(bar, float)
+            or isinstance (bar, str)
+        )
+        and (
+            isinstance(baz, float)
+            or isinstance(baz, int)
+        )
+    ):
+        pass
+    
+
 if __name__ == "__main__":
     args = ["--disable", "all"]
     for i in range(len(args)):
