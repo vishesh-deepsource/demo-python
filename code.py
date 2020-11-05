@@ -27,7 +27,9 @@ class RandomNumberGenerator:
         return random.randint(*min_max)
 
 
-def main(options: dict = {}) -> str:
+def main(options: dict = None) -> str:
+    if options is None:
+        options = {}
     pdb.set_trace()
     if "run" in options:
         value = options["run"]
@@ -46,7 +48,9 @@ def main(options: dict = {}) -> str:
     f.close()
 
 
-def moon_chooser(moons=["europa", "callisto", "phobos"]):
+def moon_chooser(moons=None):
+    if moons is None:
+        moons = ["europa", "callisto", "phobos"]
     return random.choice(moons)
 
 
