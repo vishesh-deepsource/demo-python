@@ -8,7 +8,7 @@ from django.db.models.expressions import RawSQL
 
 AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
 *FIRST = [1, 2, 3]
-(*FIRST, ) = [1, 2, 3]
+(*FIRST,) = [1, 2, 3]
 *FIRST, a, b = [1, 2, 3]
 
 
@@ -23,10 +23,12 @@ class BaseNumberGenerator:
 
     def smethod():
         """static method-to-be"""
+
     smethod = staticmethod(smethod)
 
     def cmethod(cls, something):
         """class method-to-be"""
+
     cmethod = classmethod(cmethod)
 
 
@@ -96,27 +98,18 @@ def bad_isinstance(initial_condition, object, other_obj, foo, bar, baz):
 
 
 def check(x):
-    if x == 1 or x ==2 or x ==3:
-        print('Yes')
+    if x == 1 or x == 2 or x == 3:
+        print("Yes")
     elif x != 2 or x != 3:
         print("also true")
 
     elif x in (2, 3) or x in (5, 4):
         print("Here")
 
-    elif (
-        x == 10
-        or x == 20
-        or x == 30
-        and x == 40
-    ):
+    elif x == 10 or x == 20 or x == 30 and x == 40:
         print("Sweet!")
 
-    elif (
-        x == 10
-        or x == 20
-        or x == 30
-    ):
+    elif x == 10 or x == 20 or x == 30:
         print("Why even?")
 
 
