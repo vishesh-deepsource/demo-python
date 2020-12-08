@@ -2,11 +2,6 @@ import random
 import pdb
 
 
-
-
-
-
-
 import sys as sys
 import os
 import subprocess
@@ -36,23 +31,12 @@ class BaseNumberGenerator:
     cmethod = classmethod(cmethod)
 
 
-    
-    
-    
-    
-    
 class RandomNumberGenerator:
     """Generate random numbers."""
 
     def limits(self):
         return self.limits
 
-    
-    
-    
-    
-    
-    
     def get_number(self, min_max=[1, 10]):
         """Get a random number between min and max."""
         assert all([isinstance(i, int) for i in min_max])
@@ -78,13 +62,7 @@ def main(options: dict = {}) -> str:
     f.close()
 
 
-def moon_chooser(
-    moon, moons=["europa", "callisto", "phobos"]
-
-
-
-
-):
+def moon_chooser(moon, moons=["europa", "callisto", "phobos"]):
     if moon is not None:
         moons.append(moon)
 
@@ -97,9 +75,7 @@ def get_users():
 
 
 def tar_something():
-    
-    
-    
+
     os.tempnam("dir1")
     subprocess.Popen("/bin/chown *", shell=True)
     o.system("/bin/tar xvzf *")
@@ -136,16 +112,6 @@ def check(x):
     elif x == 10 or x == 20 or x == 30:
         print("Why even?")
 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
 
 def chained_comparison():
     a = 1
@@ -155,14 +121,7 @@ def chained_comparison():
 
 
 if __name__ == "__main__":
-    args = [
-        
-        
-        
-        "--disable", 'all'
-    
-    
-    ]
+    args = ["--disable", "all"]
     for i in range(len(args)):
         has_truthy = True if args[i] else False
         if has_truthy:
