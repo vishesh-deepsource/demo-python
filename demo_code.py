@@ -2,17 +2,9 @@ import random
 import pdb
 
 
-
-
-
-
-
 import sys as sys
 import os
 import subprocess
-
-
-
 
 
 # from django.db.models.expressions import RawSQL
@@ -43,10 +35,7 @@ class BaseNumberGenerator:
 class RandomNumberGenerator:
     """Generate random numbers."""
 
-    def limits(
-        
-        
-        self):
+    def limits(self):
         return self.limits
 
     def get_number(self, min_max=[1, 10]):
@@ -63,11 +52,7 @@ def main(options: dict = {}) -> str:
         value = "default_value"
 
     if type(value) != str:
-        raise Exception(
-        
-        
-        
-        )
+        raise Exception()
     else:
         value = iter(value)
 
