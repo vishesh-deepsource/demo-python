@@ -15,6 +15,9 @@ class BaseNumberGenerator:
     def __init__(self):
         self.limits = (1, 10)
 
+    def get_yet_another_number(self, mn):
+        raise NotImplemented
+
     def get_another_number(self, min_max):
         raise NotImplementedError
 
