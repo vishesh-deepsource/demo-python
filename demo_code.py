@@ -1,5 +1,6 @@
 import random
 import pdb
+import bar
 import sys as sys
 import os
 import subprocess
