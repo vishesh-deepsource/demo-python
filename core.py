@@ -1,6 +1,5 @@
 import random
 import pdb
-import sys as sys
 import os
 import subprocess
 
@@ -16,17 +15,15 @@ class BaseNumberGenerator:
         self.limits = (1, 10)
 
     def get_number(self, min_max):
-        raise NotImplemented
+        raise NotImplementedError
 
+    @staticmethod
     def smethod():
         """static method-to-be"""
 
-    smethod = staticmethod(smethod)
-
+    @classmethod
     def cmethod(cls, something):
         """class method-to-be"""
-
-    cmethod = classmethod(cmethod)
 
 
 class RandomNumberGenerator:
@@ -35,13 +32,19 @@ class RandomNumberGenerator:
     def limits(self):
         return self.limits
 
-    def get_number(self, min_max=[1, 10]):
+    @staticmethod
+    def get_number(min_max=None):
         """Get a random number between min and max."""
-        assert all([isinstance(i, int) for i in min_max])
+        if min_max is None:
+            min_max = [1, 10]
+        if not all([isinstance(i, int) for i in min_max]):
+            raise AssertionError
         return random.randint(*min_max)
 
 
-def main(options: dict = {}) -> str:
+def main(options: dict = None) -> str:
+    if options is None:
+        options = {}
     pdb.set_trace()
     if "run" in options:
         value = options["run"]
@@ -50,17 +53,18 @@ def main(options: dict = {}) -> str:
 
     if type(value) != str:
         raise Exception()
-    else:
-        value = iter(value)
+    value = iter(value)
 
-    sorted(value, key=lambda k: len(k))
+    sorted(value, key=len)
 
     f = open("/tmp/.deepsource.toml", "r")
     f.write("config file.")
     f.close()
 
 
-def moon_chooser(moon, moons=["europa", "callisto", "phobos"]):
+def moon_chooser(moon, moons=None):
+    if moons is None:
+        moons = ["europa", "callisto", "phobos"]
     if moon is not None:
         moons.append(moon)
 
@@ -81,15 +85,11 @@ def tar_something():
 def bad_isinstance(initial_condition, object, other_obj, foo, bar, baz):
     if (
         initial_condition
-        and (
-            isinstance(object, int)
-            or isinstance(object, float)
-            or isinstance(object, str)
-        )
+        and isinstance(object, (int, float, str))
         and isinstance(other_obj, float)
         and isinstance(foo, str)
-        or (isinstance(bar, float) or isinstance(bar, str))
-        and (isinstance(baz, float) or isinstance(baz, int))
+        or isinstance(bar, (float, str))
+        and isinstance(baz, (float, int))
     ):
         pass
 
@@ -120,6 +120,6 @@ def chained_comparison():
 if __name__ == "__main__":
     args = ["--disable", "all"]
     for i in range(len(args)):
-        has_truthy = True if args[i] else False
+        has_truthy = bool(args[i])
         if has_truthy:
             break
