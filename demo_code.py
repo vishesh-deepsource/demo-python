@@ -12,7 +12,7 @@ AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
 
 
 class BaseNumberGenerator:
-    
+
     """Declare a method -- `get_number`."""
 
     def __init__(self):
