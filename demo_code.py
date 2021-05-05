@@ -1,7 +1,15 @@
 import random
 import pdb
 import sys as sys
+
+
+
+
 import os
+
+
+
+
 import subprocess
 
 # from django.db.models.expressions import RawSQL
@@ -15,6 +23,11 @@ class BaseNumberGenerator:
     def __init__(self):
         self.limits = (1, 10)
 
+        
+        
+        
+        
+        
     def get_number(self, min_max):
         raise NotImplemented
 
@@ -49,18 +62,47 @@ def main(options: dict = {}) -> str:
         value = "default_value"
 
     if type(value) != str:
+        
+        
+        
+        
+        
         raise Exception()
     else:
+        
+        
+        
+        
         value = iter(value)
 
     sorted(value, key=lambda k: len(k))
 
-    f = open("/tmp/.deepsource.toml", "r")
+    f = open("/tmp/.deepsource.toml", 'r')
     f.write("config file.")
+    
+    
+    
+    
     f.close()
 
+    
+    
+    
+    
+    
+    
 
-def moon_chooser(moon, moons=["europa", "callisto", "phobos"]):
+def moon_chooser(moon, moons=["europa",
+                              
+                              
+                              "callisto",
+                              
+                              
+                              
+                              
+                              
+                              
+                              'phobos']):
     if moon is not None:
         moons.append(moon)
 
@@ -113,13 +155,32 @@ def check(x):
 def chained_comparison():
     a = 1
     b = 2
+    
+    
+    
+    
     c = 3
     return a < b and b < c
 
 
 if __name__ == "__main__":
+    
+    
+    
+    
     args = ["--disable", "all"]
-    for i in range(len(args)):
+    for i in range(
+        
+        
+        len(
+            
+            
+            args)
+    
+    
+    
+    
+    ):
         has_truthy = True if args[i] else False
         if has_truthy:
             break
