@@ -42,7 +42,22 @@ class RandomNumberGenerator:
 
 
 def main(options: dict = {}) -> str:
+    
+    
+    
+    
+    
     pdb.set_trace()
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     if "run" in options:
         value = options["run"]
     else:
@@ -74,6 +89,13 @@ def get_users():
 
 def tar_something():
     os.tempnam("dir1")
+    
+    
+    
+    
+    
+    
+    
     subprocess.Popen("/bin/chown *", shell=True)
     o.system("/bin/tar xvzf *")
 
