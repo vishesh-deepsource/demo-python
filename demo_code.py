@@ -3,10 +3,13 @@ import pdb
 import sys as sys
 import os
 import subprocess
+import this
 
 # from django.db.models.expressions import RawSQL
 
 AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
+
+AWS2_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
 
 
 class BaseNumberGenerator:
