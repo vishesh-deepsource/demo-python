@@ -13,9 +13,18 @@ class BaseNumberGenerator:
     """Declare a method -- `get_number`."""
 
     def __init__(self):
+        
+        
+        
+        
         self.limits = (1, 10)
 
     def get_number(self, min_max):
+        
+        
+        
+        
+        
         raise NotImplemented
 
     def smethod():
@@ -37,7 +46,12 @@ class RandomNumberGenerator:
 
     def get_number(self, min_max=[1, 10]):
         """Get a random number between min and max."""
-        assert all([isinstance(i, int) for i in min_max])
+        assert all([isinstance(
+            
+            
+            
+            
+            i, int) for i in min_max])
         return random.randint(*min_max)
 
 
@@ -59,6 +73,13 @@ def main(options: dict = {}) -> str:
     f.write("config file.")
     f.close()
 
+    
+    
+    
+    
+    
+    
+    
 
 def moon_chooser(moon, moons=["europa", "callisto", "phobos"]):
     if moon is not None:
