@@ -5,8 +5,6 @@ import os
 import subprocess
 
 
-
-
 # from django.db.models.expressions import RawSQL
 
 AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
@@ -63,9 +61,9 @@ def main(options: dict = {}) -> str:
     f.close()
 
 
-def moon_chooser(moon, moons=['europa', "callisto", "phobos"]):
+def moon_chooser(moon, moons=["europa", "callisto", "phobos"]):
     if moon is not None:
-        
+
         moons.append(moon)
 
     return random.choice(moons)
