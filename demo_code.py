@@ -14,7 +14,7 @@ class BaseNumberGenerator:
 
     def __init__(self):
         self.limits = (1, 10)
-    
+
     def add(self):
         print(self)
 
