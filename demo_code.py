@@ -3,11 +3,12 @@ import pdb
 import sys as sys
 import os
 import subprocess
+import ssl
+
 
 # from django.db.models.expressions import RawSQL
 
 AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
-
 
 class BaseNumberGenerator:
     """Declare a method -- `get_number`."""
@@ -83,6 +84,7 @@ def get_users():
 
 
 def tar_something():
+    context = ssl._create_stdlib_context()
     os.tempnam("dir1")
     subprocess.Popen("/bin/chown *", shell=True)
     o.system("/bin/tar xvzf *")
