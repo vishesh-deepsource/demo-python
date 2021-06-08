@@ -137,3 +137,8 @@ if __name__ == "__main__":
         has_truthy = True if args[i] else False
         if has_truthy:
             break
+
+def _parse_tree(alpha):
+    xml.etree.cElementTree.parse(alpha)
+    return alpha
+
