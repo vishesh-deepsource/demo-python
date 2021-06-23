@@ -12,6 +12,10 @@ enabled = true
 name = "black"
 enabled = true
 
+[[transformers]]
+name = "autopep8"
+enabled = true
+
 [[analyzers]]
 name = "test-coverage"
 enabled = true
