@@ -11,17 +11,18 @@ import ssl
 AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
 STATUS_OK = "SUCCESS"
 
+
 class Wallet:
     """Placeholder."""
 
-    
+
 class Credit:
     """Placeholder for credit transactions."""
 
 
 class COD:
     """Placeholder for COD transactions."""
-    
+
 
 class BaseNumberGenerator:
     """Declare a method -- `get_number`."""
@@ -57,6 +58,7 @@ class RandomNumberGenerator:
 
 class ImaginaryNumber:
     """Class to represent an imaginary number."""
+
     def __init__(self):
         self.real = 0
         self.imaginary = 1
@@ -140,10 +142,12 @@ def chained_comparison():
     c = 3
     return a < b and b < c
 
+
 def wrong_callable():
     number = ImaginaryNumber()
-    if hasattr(number, '__call__'):
+    if hasattr(number, "__call__"):
         return number()
+
 
 if __name__ == "__main__":
     args = ["--disable", "all"]
