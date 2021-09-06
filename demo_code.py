@@ -9,6 +9,19 @@ import ssl
 # from django.db.models.expressions import RawSQL
 
 AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
+STATUS_OK = "SUCCESS"
+
+class Wallet:
+    """Placeholder."""
+
+    
+class Credit:
+    """Placeholder for credit transactions."""
+
+
+class COD:
+    """Placeholder for COD transactions."""
+    
 
 class BaseNumberGenerator:
     """Declare a method -- `get_number`."""
@@ -90,20 +103,19 @@ def tar_something():
     o.system("/bin/tar xvzf *")
 
 
-def bad_isinstance(initial_condition, object, other_obj, foo, bar, baz):
+def action(order, product, merchant):
     if (
-        initial_condition
+        order.status == STATUS_OK
         and (
-            isinstance(object, int)
-            or isinstance(object, float)
-            or isinstance(object, str)
+            isinstance(order.type, Wallet)
+            or isinstance(order.type, Credit)
+            or isinstance(order.type, COD)
         )
-        and isinstance(other_obj, float)
-        and isinstance(foo, str)
-        or (isinstance(bar, float) or isinstance(bar, str))
-        and (isinstance(baz, float) or isinstance(baz, int))
+        and product.stock > 0
+        and (isinstance(product.price, float) or isinstance(product.price, int)
     ):
-        pass
+        make transaction(order, product, merchant)
+        alert_merchant(order, product)
 
 
 def check(x):
