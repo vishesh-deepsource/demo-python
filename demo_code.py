@@ -108,13 +108,9 @@ def tar_something():
 def action(order, product, merchant):
     if (
         order.status == STATUS_OK
-        and (
-            isinstance(order.type, Wallet)
-            or isinstance(order.type, Credit)
-            or isinstance(order.type, COD)
-        )
+        and isinstance(order.type, (Wallet, Credit, COD))
         and product.stock > 0
-        and (isinstance(product.price, float) or isinstance(product.price, int))
+        and isinstance(product.price, (float, int))
     ):
         make_transaction(order, product, merchant)
         alert_merchant(order, product)
