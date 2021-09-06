@@ -112,7 +112,7 @@ def action(order, product, merchant):
             or isinstance(order.type, COD)
         )
         and product.stock > 0
-        and (isinstance(product.price, float) or isinstance(product.price, int)
+        and (isinstance(product.price, float) or isinstance(product.price, int))
     ):
         make transaction(order, product, merchant)
         alert_merchant(order, product)
