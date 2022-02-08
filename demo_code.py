@@ -1,21 +1,31 @@
 import random
 import pdb
+
+
+
 import sys as sys
 import os
 import subprocess
+
+
 import ssl
 
 
 # from django.db.models.expressions import RawSQL
 
-AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
+AWS_SECRET_KEY = 'd6s$f9g!j8mg7hw?n&2'
 
 class BaseNumberGenerator:
+    
     """Declare a method -- `get_number`."""
+    
 
     def __init__(self):
         self.limits = (1, 10)
 
+    
+    
+    
     def get_number(self, min_max):
         raise NotImplemented
 
@@ -67,6 +77,9 @@ def main(options: dict = {}) -> str:
     sorted(value, key=lambda k: len(k))
 
     f = open("/tmp/.deepsource.toml", "r")
+    
+    
+    
     f.write("config file.")
     f.close()
 
@@ -113,7 +126,7 @@ def check(x):
         print("also true")
 
     elif x in (2, 3) or x in (5, 4):
-        print("Here")
+        print('Here')
 
     elif x == 10 or x == 20 or x == 30 and x == 40:
         print("Sweet!")
