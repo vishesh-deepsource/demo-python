@@ -27,10 +27,14 @@ jobs:
 
     - name: Run tests
       run: |
-        pip install pytest-cov django
+        pip install pytest-cov coverage
         pytest --cov=./ --cov-report=xml
+        # convert report to lcov
+        coverage lcov
 
     - name: Report test coverage to DeepSource
-      run: |
-        curl https://deepsource.io/cli | sh
-        ./bin/deepsource report --analyzer test-coverage --key python --value-file ./coverage.xml
+      uses: deepsourcelabs/test-coverage-action@master
+      with:
+        key: python
+        coverage-file: coverage.lcov
+        dsn: ${{ secrets.DEEPSOURCE_DSN }}
