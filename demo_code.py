@@ -8,9 +8,10 @@ import ssl
 
 # from django.db.models.expressions import RawSQL
 
-FOO = 'bar'
+FOO = "bar"
 
 AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
+
 
 class BaseNumberGenerator:
     """Declare a method -- `get_number`."""
@@ -28,7 +29,7 @@ class BaseNumberGenerator:
 
     def cmethod(cls, something):
         """class method-to-be"""
-        foo = 'bar'
+        foo = "bar"
 
     cmethod = classmethod(cmethod)
 
@@ -47,6 +48,7 @@ class RandomNumberGenerator:
 
 class ImaginaryNumber:
     """Class to represent an imaginary number."""
+
     def __init__(self):
         self.real = 0
         self.imaginary = 1
@@ -131,10 +133,12 @@ def chained_comparison():
     c = 3
     return a < b and b < c
 
+
 def wrong_callable():
     number = ImaginaryNumber()
-    if hasattr(number, '__call__'):
+    if hasattr(number, "__call__"):
         return number()
+
 
 if __name__ == "__main__":
     args = ["--disable", "all"]
