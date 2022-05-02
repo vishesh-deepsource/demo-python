@@ -8,6 +8,8 @@ import ssl
 
 # from django.db.models.expressions import RawSQL
 
+FOO = 'bar'
+
 AWS_SECRET_KEY = "d6s$f9g!j8mg7hw?n&2"
 
 class BaseNumberGenerator:
@@ -26,6 +28,7 @@ class BaseNumberGenerator:
 
     def cmethod(cls, something):
         """class method-to-be"""
+        foo = 'bar'
 
     cmethod = classmethod(cmethod)
 
