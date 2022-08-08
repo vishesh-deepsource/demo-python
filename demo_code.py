@@ -57,7 +57,7 @@ class ImaginaryNumber:
 def main(options: dict = {}) -> str:
     pdb.set_trace()
     if "run" in options:
-        value = options['run']
+        value = options["run"]
     else:
         value = "default_value"
 
@@ -66,7 +66,7 @@ def main(options: dict = {}) -> str:
     else:
         value = iter(value)
 
-    sorted(value,             key=lambda k: len(k))
+    sorted(value, key=lambda k: len(k))
 
     f = open("/tmp/.deepsource.toml", "r")
     f.write("config file.")
