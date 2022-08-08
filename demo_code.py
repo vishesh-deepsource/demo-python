@@ -57,9 +57,9 @@ class ImaginaryNumber:
 def main(options: dict = {}) -> str:
     pdb.set_trace()
     if "run" in options:
-        value = options["run"]
+        value = options['run']
     else:
-        value = "default_value"
+        value = 'default_value'
 
     if type(value) != str:
         raise Exception()
@@ -73,7 +73,7 @@ def main(options: dict = {}) -> str:
     f.close()
 
 
-def moon_chooser(moon, moons=["europa", "callisto", "phobos"]):
+def moon_chooser(moon, moons=['europa', 'callisto', "phobos"]):
     if moon is not None:
         moons.append(moon)
 
