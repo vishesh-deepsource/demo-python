@@ -57,7 +57,7 @@ class ImaginaryNumber:
 def main(options: dict = {}) -> str:
     pdb.set_trace()
     if "run" in options:
-        value = options["run"]
+        value = options['run']
     else:
         value = "default_value"
 
