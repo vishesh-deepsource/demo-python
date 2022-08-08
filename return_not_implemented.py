@@ -20,6 +20,6 @@ class ComplexNumber:
         return res
 
 if __name__ == "__main__":
-        complex_num =    ComplexNumber(2, 5)
-        real_num         = RealNumber(32)
-    return real_num + complex_num
+    complex_num =    ComplexNumber(2, 5)
+    real_num         = RealNumber(32)
+    return real_num    +    complex_num
